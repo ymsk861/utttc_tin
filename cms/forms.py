@@ -7,7 +7,7 @@ UserModel = get_user_model()
 class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = UserModel
-        fields = ('username', 'first_name', 'last_name', 'email','twitter')
+        fields = ('username', 'first_name', 'last_name', 'email','twitter','like')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
