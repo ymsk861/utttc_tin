@@ -24,7 +24,7 @@ UserModel = get_user_model()
 
 
 class TopView(TemplateView):
-    template_name = 'cms/top.html'
+    template_name = 'cms/circled-1-1.html'
 
 
 class Login(LoginView):
