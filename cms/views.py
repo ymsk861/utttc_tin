@@ -26,6 +26,8 @@ UserModel = get_user_model()
 class TopView(TemplateView):
     template_name = 'cms/circleid-1-1.html'
 
+class NextView(TemplateView):
+    template_name = 'cms/circleid-1-2.html'
 
 class Login(LoginView):
     form_class = LoginForm
