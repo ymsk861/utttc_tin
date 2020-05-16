@@ -107,3 +107,7 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
 class User(AbstractUser):
     class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"
+
+class Like(models.Model):
+    user = models.IntegerField(default=0)
+    circle = models.IntegerField(default=0)
