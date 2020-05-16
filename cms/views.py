@@ -26,8 +26,35 @@ UserModel = get_user_model()
 class TopView(TemplateView):
     template_name = 'cms/circleid-1-1.html'
 
-class NextView(TemplateView):
+class Next11View(TemplateView):
+    template_name = 'cms/circleid-1-1.html'
+
+class Next12View(TemplateView):
     template_name = 'cms/circleid-1-2.html'
+
+class Next13View(TemplateView):
+    template_name = 'cms/circleid-1-3.html'
+
+class Next21View(TemplateView):
+    template_name = 'cms/circleid-2-1.html'
+
+class Next22View(TemplateView):
+    template_name = 'cms/circleid-2-2.html'
+
+class Next23View(TemplateView):
+    template_name = 'cms/circleid-2-3.html'
+
+class Next31View(TemplateView):
+    template_name = 'cms/circleid-3-1.html'
+
+class Next32View(TemplateView):
+    template_name = 'cms/circleid-3-2.html'
+
+class Next33View(TemplateView):
+    template_name = 'cms/circleid-3-3.html'
+
+class NextuseridView(TemplateView):
+    template_name = 'cms/userid.html'
 
 class Login(LoginView):
     form_class = LoginForm
