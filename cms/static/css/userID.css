@@ -130,6 +130,7 @@ div {
   left                : 30px;
   transform           : rotate(0deg);
   opacity             : 1.0;
+  z-index             : 2;
 }
 .userid .u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8 {
   background-color    : rgba(255,255,255,0.0);
@@ -170,12 +171,13 @@ div {
 }
 .userid .s156532740 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 48px;
-  height              : 305px;
-  width               : 407px;
+  top                 : 77px;
+  height              : 224px;
+  width               : 375px;
+  object-fit          : cover;
   position            : absolute;
   margin              : 0;
-  left                : -16px;
+  left                : 0px;
   transform           : rotate(0deg);
   opacity             : 1.0;
 }
