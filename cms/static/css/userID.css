@@ -1,0 +1,324 @@
+
+@font-face {
+                          font-family: "mplus-1c-medium";
+                          src: url('../fonts/mplus-1c-medium.ttf') format("truetype");
+                        }
+                        
+.userid {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 1328px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+  opacity             : 1.0;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.userid .u30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecb {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 324px;
+  height              : auto;
+  width               : 283px;
+  position            : absolute;
+  margin              : 0;
+  left                : 46px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.userid .rectangle {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 401px;
+  height              : 52px;
+  width               : 140px;
+  position            : absolute;
+  margin              : 0;
+  left                : 118px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .rectangle .rectangle4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 140px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .rectangle .more {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 14px;
+  height              : auto;
+  width               : 71px;
+  position            : absolute;
+  margin              : 0;
+  left                : 34px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 22.0px;
+}
+.userid .rectangle .rectangle11 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 19px;
+  height              : 30px;
+  width               : 118px;
+  position            : absolute;
+  margin              : 0;
+  left                : 11px;
+  border-radius       : 15px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .rectangle1 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 77px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .u77e2u5370u30a2u30a4u30b3u30f3u3000u5de62 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : 30px;
+  width               : 30px;
+  position            : absolute;
+  margin              : 0;
+  left                : 30px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .rectangle2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : 30px;
+  width               : 30px;
+  position            : absolute;
+  margin              : 0;
+  left                : 30px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 36px;
+  height              : auto;
+  width               : 337px;
+  position            : absolute;
+  margin              : 0;
+  left                : 29px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 18.0px;
+}
+.userid .u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8 .span1 {
+  line-height         : 27.0px;
+}
+.userid .u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8 .span2 {
+  font-family         : "Helvetica-Bold", Helvetica, Arial, serif;
+  line-height         : 22.0px;
+}
+.userid .u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8 .span3 {
+  line-height         : 27.0px;
+}
+.userid .rectangle21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 77px;
+  height              : 224px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .s156532740 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 48px;
+  height              : 305px;
+  width               : 407px;
+  position            : absolute;
+  margin              : 0;
+  left                : -16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .rectangle3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 255px;
+  height              : 46px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.userid .u30b5u30fcu30afu30ebu540d {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 266px;
+  height              : auto;
+  width               : 356px;
+  position            : absolute;
+  margin              : 0;
+  left                : 11px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "HiraginoSans-W8", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(254, 255, 254, 1.0);
+  text-align          : left;
+  line-height         : 36.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+.anima-word-break {
+  overflow-wrap       : break-word;
+  word-wrap           : break-word;
+  word-break          : break-all;
+  word-break          : break-word;
+}
