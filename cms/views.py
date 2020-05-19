@@ -19,6 +19,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import (
     CreateView, UpdateView, DeleteView,
 )
+from .models import Like
 
 UserModel = get_user_model()
 
@@ -99,3 +100,7 @@ class UserDelete(OnlyYouMixin, DeleteView):
     model = UserModel
     template_name = 'cms/user_delete.html'
     success_url = reverse_lazy('cms:top')
+
+def like_listrequest(request):
+    likes = Like.objects.filter(user=<int:pk>)
+    return render(request,'cms/userid.html',{'likes':likes})
