@@ -1,161 +1,29 @@
 <html>
-<head>
-<link href="../../static/css/main.css" rel="stylesheet" type="text/css"/>
-</head>
 <body>
-<div id="phone">
-  <div id="app">
-    <div class="header">
-      <div class="top">
-        <span class="left">
-          <span class="fontawesome-circle"></span>
-          <span class="fontawesome-circle"></span>
-          <span class="fontawesome-circle-blank"></span>
-          <a href="http://rena.to" target="_blank">rena.to</a>
-          <span class="fontawesome-signal"></span>
-        </span>
-        <span class="center clock"></span>
-        <span class="right">
-          <span>75%</span>
-          <div id="battery"></div>
-          <span class="fontawesome-bolt"></span>
-        </span>
-      </div>
-    </div>
-    <div id="people"></div>
-    <div id="control">
-      <div class="button no">
-        <a href="#" class="trigger"></a>
-      </div>
-      <div class="button info">
-        <a href="#" class="trigger"></a>
-      </div>
-      <div class="button yes">
-        <a href="#" class="trigger"></a>
-      </div>
-    </nav>
-  </div>
- </div>
+<div id="output_csv_name">
 </div>
-<div id="copy">
-  created by <a href="http://rena.to" target="_blank">rena.to</a>
-</div>
-</main>
 <script>
-  $('a[href*=#]').click(function(){
-  return false;
-});
+  const outputElementName = document.getElementById('output_csv_name');
 
-
-var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-
-var Person = {
-  wrap: $('#people'),
-  people: [
-    {
-      name: 'Linda',
-      age: 25,
-      img: "https://i.imgur.com/QZuGC10.jpg"
-    },
-    {
-      name: 'Lisa',
-      age: 20,
-      img: "https://i.imgur.com/1EWwp59.jpg"
-    },
-    {
-      name: 'Sandra',
-      age: 18,
-      img: "https://i.imgur.com/Lu3laIj.jpg"
-    },
-    {
-      name: 'Chloe',
-      age: 18,
-      img: "https://i.imgur.com/WgYIxhw.png"
-    },
-    {
-      name: 'Alexa',
-      age: 23,
-      img: "https://i.imgur.com/D0PQegY.png"
-    },
-    {
-      name: 'Maria',
-      age: 21,
-      img: "https://i.imgur.com/eqd5IhH.jpg"
-    },
-    {
-      name: 'Emma',
-      age: 24,
-      img: "https://i.imgur.com/4F9NXPo.png"
-    },
-    {
-      name: 'Sara',
-      age: 18,
-      img: "http://i40.tinypic.com/ofxe21.jpg"
-    },
-    {
-      name: 'Lara',
-      age: 22,
-      img: "https://i.imgur.com/HMkdN6A.jpg"
-    }
-  ],
-  add: function(){
-    var random =     this.people[Math.floor(Math.random() * this.people.length)];
-    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + random.age + "</span></div>");
-  }
+function getCsvDataName(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArrayName(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
 }
 
-var App = {
-  yesButton: $('.button.yes .trigger'),
-  noButton: $('.button.no .trigger'),
-  blocked: false,
-  like: function(liked){
-    var animate = liked ? 'animateYes' : 'animateNo';
-    var self = this;
-    Person.add();
-    if (!this.blocked) {
-      this.blocked = true;
-      $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
-        $(this).remove();
-        self.blocked = false;
-      });
-    }
-  }
-};
-
-var Phone = {
-  wrap: $('#phone'),
-  clock: $('.clock'),
-  updateClock: function() {
-    var date = new Date();
-    var hours = date.getHours();
-    var min = date.getMinutes();
-    hours = (hours < 10 ? "0" : "") + hours;
-    min = (min < 10 ? "0" : "") + min;
-    var str = hours + ":" + min;
-    this.clock.text(str);
-  }
+function convertArrayName(data) {
+ const dataArrayName = [];
+ const dataStringName = data.split('\n');
+ for (let i = 0; i < dataStringName.length; i++) {
+  dataArrayName[i] = dataStringName[i].split(',');
+ }
+ outputElementName.innerHTML = dataArrayName[1][8];
 }
-
-App.yesButton.on('mousedown', function() {
-  App.like(true);
-});
-
-App.noButton.on('mousedown', function() {
-  App.like(false);
-});
-
-$(document).ready(function() {
-  Person.people.forEach(function(person){
-    new Image().src = person.img;
-  });
-  Phone.updateClock();
-  setInterval('Phone.updateClock()', 1000);
-
-  Person.add();
-  Person.add();
-  Person.add();
-  Person.add();
-});
+getCsvDataName('static/csv/bukatudata.csv');
 </script>
 </body>
 </html>
