@@ -24,7 +24,7 @@ UserModel = get_user_model()
 
 
 class TopView(TemplateView):
-    template_name = 'cms/demo.html'
+    template_name = 'cms/circleid-1-1.html'
 
 class Next11View(TemplateView):
     template_name = 'cms/circleid-1-1.html'

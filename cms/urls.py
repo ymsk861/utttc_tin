@@ -5,7 +5,7 @@ from . import views
 app_name = 'cms'
 
 urlpatterns = [
-    path('', views.TopView.as_view(), name='demo'),
+    path('', views.TopView.as_view(), name='top'),
     path('circleid-1-1/', views.Next11View.as_view(), name='circleid-1-1'),
     path('circleid-1-2/', views.Next12View.as_view(), name='circleid-1-2'),
     path('circleid-1-3/', views.Next13View.as_view(), name='circleid-1-3'),

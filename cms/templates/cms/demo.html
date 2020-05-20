@@ -21,9 +21,9 @@ function convertArrayName(data) {
  for (let i = 0; i < dataStringName.length; i++) {
   dataArrayName[i] = dataStringName[i].split(',');
  }
- outputElementName.innerHTML = dataArrayName;
+ outputElementName.innerHTML = dataArrayName[2][1];
 }
-getCsvDataName('static/csv/bukatudata.csv');
+getCsvDataName('../../static/csv/bukatu.csv');
 </script>
 </body>
 </html>

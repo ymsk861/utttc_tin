@@ -181,9 +181,9 @@ function convertArrayName(data) {
  for (let i = 0; i < dataStringName.length; i++) {
   dataArrayName[i] = dataStringName[i].split(',');
  }
- outputElementName.innerHTML = dataArrayName[2][1];
+ outputElementName.innerHTML = dataArrayName[1][1];
 }
-getCsvDataName('static/csv/bukatudata.csv');
+getCsvDataName('static/csv/bukatu.csv');
 const outputElementTag1 = document.getElementById('output_csv_tag1');
 
 function getCsvData(dataPath) {
@@ -204,7 +204,7 @@ function convertArray(data) {
     }
     outputElementTag1.innerHTML = dataArray[1][2];
 }
-getCsvData('../../static/csv/bukatudata.csv');
+getCsvData('../../static/csv/bukatu.csv');
 const outputElementTag2 = document.getElementById('output_csv_tag2');
 
 function getCsvDataTag2(dataPath) {
@@ -225,7 +225,7 @@ function convertArrayTag2(data) {
  }
  outputElementTag2.innerHTML = dataArrayTag2[1][3];
 }
-getCsvDataTag2('../../static/csv/bukatudata.csv');
+getCsvDataTag2('../../static/csv/bukatu.csv');
 const outputElementTag3 = document.getElementById('output_csv_tag3');
 
 function getCsvDataTag3(dataPath) {
@@ -247,7 +247,7 @@ function convertArrayTag3(data) {
  outputElementTag3.innerHTML = dataArrayTag3[1][4];
 }
 
-getCsvDataTag3('../../static/csv/bukatudata.csv');
+getCsvDataTag3('../../static/csv/bukatu.csv');
         </script>
         <!-- End of Scripts -->
     </body>

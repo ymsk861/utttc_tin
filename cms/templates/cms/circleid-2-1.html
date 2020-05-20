@@ -19,15 +19,13 @@
         <input id="anPageName" name="page" type="hidden" value="circleid21"/>
         <div class="circleid21 anima-word-break ">
             <div style="width: 375px; height: 100%; position:relative; margin:auto;">
-                <div class="u8a73u7d30u8aacu660e">
-                    詳細説明<br />
+                <div class="u8a73u7d30u8aacu660e" id="output_csv_detail">
                 </div>
                 <div class="rectangle">
                 </div>
                 <img alt="Image" anima-src="../static/images/circleid-2-1-s156532740.png" class="s156532740" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <img alt="Image" anima-src="../static/images/circleid-2-3-rectangle.png" class="rectangle1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <div class="u30b5u30fcu30afu30ebu540d">
-                    サークル名
+                <div class="u30b5u30fcu30afu30ebu540d" id="output_csv_name">
                 </div>
                 <a href="javascript:history.back()">
                     <div class="u25b3close">
@@ -111,6 +109,48 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
+            const outputElementName = document.getElementById('output_csv_name');
+
+function getCsvDataName(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArrayName(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArrayName(data) {
+ const dataArrayName = [];
+ const dataStringName = data.split('\n');
+ for (let i = 0; i < dataStringName.length; i++) {
+  dataArrayName[i] = dataStringName[i].split(',');
+ }
+ outputElementName.innerHTML = dataArrayName[1][1];
+}
+getCsvDataName('../../static/csv/bukatu.csv');
+const outputElementDetail = document.getElementById('output_csv_detail');
+
+function getCsvData(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArray(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArray(data) {
+    const dataArray = [];
+    const dataString = data.split('\n');
+    for (let i = 0; i < dataString.length; i++) {
+        dataArray[i] = dataString[i].split(',');
+    }
+    outputElementDetail.innerHTML = dataArray[1][8];
+}
+getCsvData('../../static/csv/bukatu.csv');
         </script>
         <!-- End of Scripts -->
     </body>
