@@ -64,8 +64,7 @@
                     </a>
                 </div>
                 <img alt="Image" anima-src="../static/images/circleid-1-2-rectangle.png" class="rectangle1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                <div class="u30b5u30fcu30afu30ebu540d">
-                    サークル名
+                <div class="u30b5u30fcu30afu30ebu540d" id="output_csv_name">
                 </div>
                 <img alt="Image" anima-src="../static/images/circleid-3-2-oval-1@2x.png" class="oval21" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <img alt="Image" anima-src="../static/images/circleid-3-2-oval-1@2x.png" class="oval4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
@@ -81,14 +80,11 @@
                 </div>
                 <div class="rectangle5">
                 </div>
-                <div class="u30bfu30b02">
-                    タグ2
+                <div class="u30bfu30b02" id="output_csv_tag1">
                 </div>
-                <div class="u30bfu30b03">
-                    タグ3
+                <div class="u30bfu30b03" id="output_csv_tag2">
                 </div>
-                <div class="u30bfu30b01">
-                    タグ1
+                <div class="u30bfu30b01" id="output_csv_tag3">
                 </div>
             </div>
         </div>
@@ -167,6 +163,91 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
+            const outputElementName = document.getElementById('output_csv_name');
+
+function getCsvDataName(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArrayName(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArrayName(data) {
+ const dataArrayName = [];
+ const dataStringName = data.split('\n');
+ for (let i = 0; i < dataStringName.length; i++) {
+  dataArrayName[i] = dataStringName[i].split(',');
+ }
+ outputElementName.innerHTML = dataArrayName[1][1];
+}
+getCsvDataName('static/csv/bukatudata.csv');
+const outputElementTag1 = document.getElementById('output_csv_tag1');
+
+function getCsvData(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArray(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArray(data) {
+    const dataArray = [];
+    const dataString = data.split('\n');
+    for (let i = 0; i < dataString.length; i++) {
+        dataArray[i] = dataString[i].split(',');
+    }
+    outputElementTag1.innerHTML = dataArray[1][2];
+}
+getCsvData('../../static/csv/bukatudata.csv');
+const outputElementTag2 = document.getElementById('output_csv_tag2');
+
+function getCsvDataTag2(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArrayTag2(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArrayTag2(data) {
+ const dataArrayTag2 = [];
+ const dataStringTag2 = data.split('\n');
+ for (let i = 0; i < dataStringTag2.length; i++) {
+  dataArrayTag2[i] = dataStringTag2[i].split(',');
+ }
+ outputElementTag2.innerHTML = dataArrayTag2[1][3];
+}
+getCsvDataTag2('../../static/csv/bukatudata.csv');
+const outputElementTag3 = document.getElementById('output_csv_tag3');
+
+function getCsvDataTag3(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  convertArrayTag3(response);
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+function convertArrayTag3(data) {
+ const dataArrayTag3 = [];
+ const dataStringTag3 = data.split('\n');
+ for (let i = 0; i < dataStringTag3.length; i++) {
+  dataArrayTag3[i] = dataStringTag3[i].split(',');
+ }
+ outputElementTag3.innerHTML = dataArrayTag3[1][4];
+}
+
+getCsvDataTag3('../../static/csv/bukatudata.csv');
         </script>
         <!-- End of Scripts -->
     </body>
