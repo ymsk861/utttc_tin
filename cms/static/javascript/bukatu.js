@@ -1,3 +1,7 @@
+var random = Math.floor( Math.random() * 4 );
+
+var A=console.log( random );
+
 //部活の名前
 const outputElementName = document.getElementById('output_csv_name');
 
@@ -20,6 +24,7 @@ function convertArrayName(data) {
  outputElementName.innerHTML = dataArrayName[1][1];
 }
 getCsvDataName('../../static/csv/bukatu.csv');
+//outputElementNameに変数が入っている。
 //tag1
 const outputElementTag1 = document.getElementById('output_csv_tag1');
 
@@ -109,3 +114,10 @@ function convertArrayDetail(data) {
     outputElementDetail.innerHTML = dataArrayDetail[1][8];
 }
 getCsvDataDetail('../../static/csv/bukatu.csv');
+//image
+var img1=document.getElementById("image_place1");
+var idx = 1;
+img1.src="../static/images/image"+idx+"-1.png";
+//image2
+var img2=document.getElementById("image_place2");
+img2.src="../static/images/image"+idx+"-2.png";
