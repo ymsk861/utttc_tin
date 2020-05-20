@@ -163,92 +163,9 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
-            const outputElementName = document.getElementById('output_csv_name');
 
-function getCsvDataName(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArrayName(response);
- });
- request.open('GET', dataPath, true);
- request.send();
-}
-
-function convertArrayName(data) {
- const dataArrayName = [];
- const dataStringName = data.split('\n');
- for (let i = 0; i < dataStringName.length; i++) {
-  dataArrayName[i] = dataStringName[i].split(',');
- }
- outputElementName.innerHTML = dataArrayName[1][1];
-}
-getCsvDataName('static/csv/bukatu.csv');
-const outputElementTag1 = document.getElementById('output_csv_tag1');
-
-function getCsvData(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArray(response);
- });
- request.open('GET', dataPath, true);
- request.send();
-}
-
-function convertArray(data) {
-    const dataArray = [];
-    const dataString = data.split('\n');
-    for (let i = 0; i < dataString.length; i++) {
-        dataArray[i] = dataString[i].split(',');
-    }
-    outputElementTag1.innerHTML = dataArray[1][2];
-}
-getCsvData('../../static/csv/bukatu.csv');
-const outputElementTag2 = document.getElementById('output_csv_tag2');
-
-function getCsvDataTag2(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArrayTag2(response);
- });
- request.open('GET', dataPath, true);
- request.send();
-}
-
-function convertArrayTag2(data) {
- const dataArrayTag2 = [];
- const dataStringTag2 = data.split('\n');
- for (let i = 0; i < dataStringTag2.length; i++) {
-  dataArrayTag2[i] = dataStringTag2[i].split(',');
- }
- outputElementTag2.innerHTML = dataArrayTag2[1][3];
-}
-getCsvDataTag2('../../static/csv/bukatu.csv');
-const outputElementTag3 = document.getElementById('output_csv_tag3');
-
-function getCsvDataTag3(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArrayTag3(response);
- });
- request.open('GET', dataPath, true);
- request.send();
-}
-
-function convertArrayTag3(data) {
- const dataArrayTag3 = [];
- const dataStringTag3 = data.split('\n');
- for (let i = 0; i < dataStringTag3.length; i++) {
-  dataArrayTag3[i] = dataStringTag3[i].split(',');
- }
- outputElementTag3.innerHTML = dataArrayTag3[1][4];
-}
-
-getCsvDataTag3('../../static/csv/bukatu.csv');
         </script>
+        <script src="../../static/javascript/bukatu.js"></script>
         <!-- End of Scripts -->
     </body>
 </html>

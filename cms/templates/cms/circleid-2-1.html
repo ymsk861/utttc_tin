@@ -109,49 +109,8 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
-            const outputElementName = document.getElementById('output_csv_name');
-
-function getCsvDataName(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArrayName(response);
- });
- request.open('GET', dataPath, true);
- request.send();
-}
-
-function convertArrayName(data) {
- const dataArrayName = [];
- const dataStringName = data.split('\n');
- for (let i = 0; i < dataStringName.length; i++) {
-  dataArrayName[i] = dataStringName[i].split(',');
- }
- outputElementName.innerHTML = dataArrayName[1][1];
-}
-getCsvDataName('../../static/csv/bukatu.csv');
-const outputElementDetail = document.getElementById('output_csv_detail');
-
-function getCsvData(dataPath) {
- const request = new XMLHttpRequest();
- request.addEventListener('load', (event) => {
-  const response = event.target.responseText;
-  convertArray(response);
- });
- request.open('GET', dataPath, true);
- request.send();
-}
-
-function convertArray(data) {
-    const dataArray = [];
-    const dataString = data.split('\n');
-    for (let i = 0; i < dataString.length; i++) {
-        dataArray[i] = dataString[i].split(',');
-    }
-    outputElementDetail.innerHTML = dataArray[1][8];
-}
-getCsvData('../../static/csv/bukatu.csv');
         </script>
+        <script src="../../static/javascript/bukatu.js"></script>
         <!-- End of Scripts -->
     </body>
 </html>
