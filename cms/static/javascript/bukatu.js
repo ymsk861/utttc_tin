@@ -21,7 +21,7 @@ function convertArrayName(data) {
  for (let i = 0; i < dataStringName.length; i++) {
   dataArrayName[i] = dataStringName[i].split(',');
  }
- outputElementName.innerHTML = dataArrayName[1][1];
+ outputElementName.innerHTML = dataArrayName[idx][1];
 }
 getCsvDataName('../../static/csv/bukatu.csv');
 //outputElementNameに変数が入っている。
@@ -44,7 +44,7 @@ function convertArray(data) {
     for (let i = 0; i < dataString.length; i++) {
         dataArray[i] = dataString[i].split(',');
     }
-    outputElementTag1.innerHTML = dataArray[1][2];
+    outputElementTag1.innerHTML = dataArray[idx][2];
 }
 getCsvData('../../static/csv/bukatu.csv');
 //tag2
@@ -66,7 +66,7 @@ function convertArrayTag2(data) {
  for (let i = 0; i < dataStringTag2.length; i++) {
   dataArrayTag2[i] = dataStringTag2[i].split(',');
  }
- outputElementTag2.innerHTML = dataArrayTag2[1][3];
+ outputElementTag2.innerHTML = dataArrayTag2[idx][3];
 }
 getCsvDataTag2('../../static/csv/bukatu.csv');
 //tag3
@@ -88,7 +88,7 @@ function convertArrayTag3(data) {
  for (let i = 0; i < dataStringTag3.length; i++) {
   dataArrayTag3[i] = dataStringTag3[i].split(',');
  }
- outputElementTag3.innerHTML = dataArrayTag3[1][4];
+ outputElementTag3.innerHTML = dataArrayTag3[idx][4];
 }
 
 getCsvDataTag3('../../static/csv/bukatu.csv');
@@ -111,13 +111,6 @@ function convertArrayDetail(data) {
     for (let i = 0; i < dataStringDetail.length; i++) {
         dataArrayDetail[i] = dataStringDetail[i].split(',');
     }
-    outputElementDetail.innerHTML = dataArrayDetail[1][8];
+    outputElementDetail.innerHTML = dataArrayDetail[idx][8];
 }
 getCsvDataDetail('../../static/csv/bukatu.csv');
-//image
-var img1=document.getElementById("image_place1");
-var idx = 1;
-img1.src="../static/images/image"+idx+"-1.png";
-//image2
-var img2=document.getElementById("image_place2");
-img2.src="../static/images/image"+idx+"-2.png";
