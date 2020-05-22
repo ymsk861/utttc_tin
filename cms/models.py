@@ -112,7 +112,7 @@ class User(AbstractUser):
 class BookmarkBase(models.Model):
     class Meta:
         abstract = True
-    user = models.ForeignKey(User, verbose_name="User")
+    user = models.ForeignKey(User, verbose_name="User", on_delete = models.CASCADE)
     def __str__(self):
         return self.user.username
 
