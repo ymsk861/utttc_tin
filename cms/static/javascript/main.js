@@ -82,10 +82,3 @@ function getCookie(name) {
     }
     return cookieValue;
 }
-
-// Setup AJAX
-$(function () {
-    $.ajaxSetup({
-        headers: { "X-CSRFToken": getCookie("csrftoken") }
-    });
-});

@@ -211,13 +211,12 @@
             }
                 return cookieValue;
             }
-
-                    // Setup AJAX
-                    $(function () {
+            // Setup AJAX
+            $(function () {
                 $.ajaxSetup({
-                headers: { "X-CSRFToken": getCookie("csrftoken") }
+                    headers: { "X-CSRFToken": getCookie("csrftoken") }
                 });
-                    });
+            });
 
         </script>
         <!-- End of Scripts -->
