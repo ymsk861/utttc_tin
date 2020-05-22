@@ -130,7 +130,6 @@ class BookmarkArticle(BookmarkBase):
         db_table = "bookmark_article"
     obj = models.ForeignKey(Circle, verbose_name="Circle", on_delete = models.CASCADE)
 
-an穴井
 class BookmarkComment(BookmarkBase):
     class Meta:
         db_table = "bookmark_comment"
