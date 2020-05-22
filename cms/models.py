@@ -109,7 +109,7 @@ class User(AbstractUser):
         swappable = "AUTH_USER_MODEL"
 
 
-class Circle(models.Model):
+class Article(models.Model):
     name = models.CharField("名前", max_length=100)
 
 
@@ -128,7 +128,7 @@ class BookmarkBase(models.Model):
 class BookmarkArticle(BookmarkBase):
     class Meta:
         db_table = "bookmark_article"
-    obj = models.ForeignKey(Circle, verbose_name="Circle", on_delete = models.CASCADE)
+    obj = models.ForeignKey(Article, verbose_name="Article", on_delete = models.CASCADE)
 
 class BookmarkComment(BookmarkBase):
     class Meta:
