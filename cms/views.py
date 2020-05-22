@@ -113,7 +113,6 @@ from django.views import View
 class BookmarkView(View):
     # This variable will set the bookmark model to be processed
     model = None
-
     def post(self, request, pk):
         # We need a user
         user = auth.get_user(request)
@@ -123,7 +122,6 @@ class BookmarkView(View):
         # Then we believe that the request was to delete the bookmark
         if not created:
             bookmark.delete()
-
         return HttpResponse(
             json.dumps({
                 "result": created,

@@ -2,6 +2,16 @@ from django.urls import path
 
 from . import views
 
+
+# -*- coding: utf-8 -*-
+
+from django.conf.urls import url#この行が追加されました
+from django.contrib.auth.decorators import login_required#この行が追加されました
+
+from . import views#この行が追加されました
+from .models import BookmarkArticle, BookmarkComment#この行が追加されました
+
+
 app_name = 'cms'
 
 urlpatterns = [
@@ -23,18 +33,7 @@ urlpatterns = [
     path('user/<int:pk>/', views.UserDetail.as_view(), name='user_detail'),
     path('user/', views.UserList.as_view(), name='user_list'),
     path('user/<int:pk>/delete/', views.UserDelete.as_view(), name='user_delete'),
+    url(r'^article/(?P<pk>\d+)/bookmark/$', login_required(views.BookmarkView.as_view(model=BookmarkArticle)), name='article_bookmark'),#この行が追加されました
+    url(r'^comment/(?P<pk>\d+)/bookmark/$', login_required(views.BookmarkView.as_view(model=BookmarkComment)), name='comment_bookmark'),#この行が追加されました
 ]
 
-# -*- coding: utf-8 -*-
-
-from django.conf.urls import url
-from django.contrib.auth.decorators import login_required
-
-from . import views
-from .models import BookmarkArticle, BookmarkComment
-
-app_name = 'ajax'
-urlpatterns = [
-    url(r'^article/(?P<pk>\d+)/bookmark/$',login_required(views.BookmarkView.as_view(model=BookmarkArticle)),name='article_bookmark'),
-    url(r'^comment/(?P<pk>\d+)/bookmark/$',login_required(views.BookmarkView.as_view(model=BookmarkComment)),name='comment_bookmark'),
-]
