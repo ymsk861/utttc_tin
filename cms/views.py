@@ -110,6 +110,10 @@ from django.http import HttpResponse
 from django.views import View
 
 
+def get_bookmark_count(self):
+    return self.bookmarkarticle_set.all().count()
+
+
 class BookmarkView(View):
     # This variable will set the bookmark model to be processed
     model = None
