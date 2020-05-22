@@ -24,3 +24,17 @@ urlpatterns = [
     path('user/', views.UserList.as_view(), name='user_list'),
     path('user/<int:pk>/delete/', views.UserDelete.as_view(), name='user_delete'),
 ]
+
+# -*- coding: utf-8 -*-
+
+from django.conf.urls import url
+from django.contrib.auth.decorators import login_required
+
+from . import views
+from .models import BookmarkArticle, BookmarkComment
+
+app_name = 'ajax'
+urlpatterns = [
+    url(r'^article/(?P<pk>\d+)/bookmark/$',login_required(views.BookmarkView.as_view(model=BookmarkArticle)),name='article_bookmark'),
+    url(r'^comment/(?P<pk>\d+)/bookmark/$',login_required(views.BookmarkView.as_view(model=BookmarkComment)),name='comment_bookmark'),
+]

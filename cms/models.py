@@ -107,3 +107,23 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
 class User(AbstractUser):
     class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"
+
+
+class BookmarkBase(models.Model):
+    class Meta:
+        abstract = True
+    user = models.ForeignKey(User, verbose_name="User")
+    def __str__(self):
+        return self.user.username
+
+
+class BookmarkArticle(BookmarkBase):
+    class Meta:
+        db_table = "bookmark_article"
+    obj = models.ForeignKey(Article, verbose_name="Article")
+
+
+class BookmarkComment(BookmarkBase):
+    class Meta:
+        db_table = "bookmark_comment"
+    obj = models.ForeignKey(Comment, verbose_name="Comment")
