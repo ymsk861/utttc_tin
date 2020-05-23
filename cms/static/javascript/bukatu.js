@@ -1,7 +1,6 @@
 //var random = Math.floor( Math.random() * 4 );
 
 //var A=console.log( random );
-
 //部活の名前
     const outputElementName = document.getElementById('output_csv_name');
 
