@@ -124,6 +124,11 @@ class BookmarkBase(models.Model):
     def __str__(self):
         return self.user.username
 
+class like(models.Model):
+    user = models.IntegerField()
+    circle = models.IntegerField()
+
+
 
 class BookmarkArticle(BookmarkBase):
     class Meta:
@@ -134,3 +139,21 @@ class BookmarkComment(BookmarkBase):
     class Meta:
         db_table = "bookmark_comment"
     obj = models.ForeignKey(Comment, verbose_name="Comment", on_delete = models.CASCADE)
+
+
+from django.db import models
+from django.forms import ModelForm
+
+# Create your models here.
+
+class Todo(models.Model):
+    todo_id = models.CharField(primary_key=True, max_length=5)
+    title = models.CharField(max_length=50)
+    main_text = models.CharField(max_length=300)
+    update_date = models.DateTimeField('date published')
+
+class TodoForm(ModelForm):
+    class Meta:
+        model = Todo
+        fields = ['todo_id', 'title', 'main_text', 'update_date']
+        exclude = ['todo_id', 'update_date']

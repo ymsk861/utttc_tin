@@ -33,7 +33,15 @@ urlpatterns = [
     path('user/<int:pk>/', views.UserDetail.as_view(), name='user_detail'),
     path('user/', views.UserList.as_view(), name='user_list'),
     path('user/<int:pk>/delete/', views.UserDelete.as_view(), name='user_delete'),
+    path('index', views.index, name='index'),
+    path('create', views.create, name='create'),
+    path('read', views.read, name='read'),
+    path('index', views.index, name='index'),
+    path('new/', views.new, name='new'),
+    path('add/', views.add, name='add'),
+    path('<int:todo_id>/', views.detail, name='detail'),
+    path('add/<int:todo_id>/', views.update, name='update'),
+    path('delete/<int:todo_id>/', views.delete, name='delete'),
     url(r'^article/(?P<pk>\d+)/bookmark/$', login_required(views.BookmarkView.as_view(model=BookmarkArticle)), name='article_bookmark'),#この行が追加されました
     url(r'^comment/(?P<pk>\d+)/bookmark/$', login_required(views.BookmarkView.as_view(model=BookmarkComment)), name='comment_bookmark'),#この行が追加されました
 ]
-
