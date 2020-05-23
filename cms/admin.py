@@ -9,6 +9,7 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 from .models import (
     User,
+    Likes
 )
 
 
@@ -87,6 +88,7 @@ class UserAdmin(BaseUserAdmin):
 
 # Now register the new UserAdmin...
 admin.site.register(User, UserAdmin)
+admin.site.register(Likes)
 # ... and, since we're not using Django's built-in permissions,
 # unregister the Group model from admin.
 admin.site.unregister(Group)
