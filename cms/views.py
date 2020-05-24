@@ -162,13 +162,13 @@ def detail(request, todo_id):
     return render(request, 'cms/new.html', context)
 
 def create(request):
-    t = Todo(todo_id=1, title="hoge", main_text="fuga", update_date=timezone.now())
+    t = Todo(todo_id=1)
     t.save()
     return HttpResponse("insert!")
 
 def read(request):
     t = Todo.objects.get(todo_id=1)
-    return HttpResponse('todo_id:%s,  title:%s, main_text:%s.' % (t.todo_id, t.title, t.main_text))
+    return HttpResponse('todo_id:%s,' % (t.todo_id))
 
 
 def update(request, todo_id):
@@ -181,3 +181,44 @@ def delete(request, todo_id):
     t = Todo.objects.get(todo_id=todo_id)
     t.delete()
     return HttpResponseRedirect(reverse('index'))
+
+
+#
+# 初期値
+# from django.http import HttpResponse, HttpResponseRedirect
+# from django.utils import timezone
+# from django.urls import reverse
+# from django.shortcuts import render
+# from todos.models import Todo, TodoForm
+#
+# def index(request):
+#     todo_list = Todo.objects.all()
+#     context = {'todo_list': todo_list}
+#     return render(request, 'todos/index.html', context)
+#
+# def new(request):
+#     return render(request, 'todos/new.html')
+#
+# def add(request):
+#     t1 = Todo()
+#     t1.todo_id = len(Todo.objects.order_by('-todo_id'))+1
+#     t1.update_date = timezone.now()
+#     t = TodoForm(request.POST, instance=t1)
+#     t.save()
+#     return HttpResponseRedirect(reverse('index'))
+#
+# def detail(request, todo_id):
+#     todo = Todo.objects.get(todo_id=todo_id)
+#     context = {'todo': todo}
+#     return render(request, 'todos/new.html', context)
+#
+# def update(request, todo_id):
+#     t1 = Todo.objects.get(todo_id=todo_id)
+#     t = TodoForm(request.POST, instance=t1)
+#     t.save()
+#     return HttpResponseRedirect(reverse('index'))
+#
+# def delete(request, todo_id):
+#     t = Todo.objects.get(todo_id=todo_id)
+#     t.delete()
+#     return HttpResponseRedirect(reverse('index'))
