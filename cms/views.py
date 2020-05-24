@@ -211,6 +211,8 @@ def new(request):
     return render(request, 'cms/new.html')
 
 
+
+
 def add(request):
     t1 = Todo()
     t1.todo_id = 1
