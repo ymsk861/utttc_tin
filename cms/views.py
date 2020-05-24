@@ -154,7 +154,7 @@ def add(request):
     t1.update_date = timezone.now()
     t = TodoForm(request.POST, instance=t1)
     t.save()
-    return HttpResponseRedirect(reverse('index'))
+    return HttpResponseRedirect('index')
 
 def detail(request, todo_id):
     todo = Todo.objects.get(todo_id=todo_id)

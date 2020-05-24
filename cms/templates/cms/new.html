@@ -1,7 +1,7 @@
 <html>
 <head></head>
 <body>
-  <form action="/todos/add/{% if todo %}{{ todo.todo_id }}/{% endif %}" method="post">
+  <form action="/add/{% if todo %}{{ todo.todo_id }}/{% endif %}" method="post">
     {% csrf_token %}
     title: <input type="text" name="title" value="{{ todo.title }}"/>
     main: <input type="text" name="main_text" value="{{ todo.main_text }}"/>
