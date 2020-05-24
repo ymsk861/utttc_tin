@@ -3,7 +3,7 @@ from django.contrib.auth.views import (
     LoginView, LogoutView,
 )
 from django.http import HttpResponseRedirect
-from django.shortcuts import resolve_url
+from django.shortcuts import resolve_url, render
 from django.urls import reverse_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import (
@@ -19,6 +19,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import (
     CreateView, UpdateView, DeleteView,
 )
+from .models import Likes
 
 UserModel = get_user_model()
 
@@ -54,7 +55,13 @@ class Next33View(TemplateView):
     template_name = 'cms/circleid-3-3.html'
 
 class NextuseridView(TemplateView):
+    model = UserModel
     template_name = 'cms/userid.html'
+
+    def Mylist(request):
+        param = Likes.objects.filter(user=request.user.id)
+        circles = param.circle
+        return render(request, 'cms/userid.html', circles)
 
 class Login(LoginView):
     form_class = LoginForm

@@ -14,13 +14,15 @@
         <link href="../static/css/userID.css" rel="stylesheet" type="text/css"/>
         <meta content="AnimaApp.com - Design to code, Automated." name="author"/>
     </head>
-    <body style="margin: 0;
- background: rgba(255, 255, 255, 1.0);">
+    <body style="margin: 0;background: rgba(255, 255, 255, 1.0);">
+        {% for ID in circles %}
+        <script>
+            idx = circles;
+        </script>
         <input id="anPageName" name="page" type="hidden" value="userid"/>
         <div class="userid anima-word-break ">
             <div style="width: 375px; height: 100%; position:relative; margin:auto;">
-                <div class="u30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecb">
-                    サークル紹介<br />サークル紹介<br />サークル紹介<br />サークル紹介<br />サークル紹介
+                <div class="u30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecb" id="output_csv_detail">
                 </div>
                 <div class="rectangle">
                     <img alt="Image" anima-src="../static/images/userid-rectangle@2x.png" class="rectangle4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
@@ -50,6 +52,8 @@
                 </div>
             </div>
         </div>
+        <script src="../../static/javascript/bukatu.js"></script>
+        {% endfor %}
         <!-- Scripts -->
         <script>
             anima_isHidden = function(e) {
