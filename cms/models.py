@@ -124,9 +124,9 @@ class BookmarkBase(models.Model):
     def __str__(self):
         return self.user.username
 
-class like(models.Model):
-    user = models.IntegerField()
-    circle = models.IntegerField()
+class Like(models.Model):
+    user = models.IntegerField()#ハコを作る
+    circle = models.IntegerField()#ハコを作る
 
 
 
@@ -148,12 +148,17 @@ from django.forms import ModelForm
 
 class Todo(models.Model):
     todo_id = models.CharField(primary_key=True, max_length=5)
-    title = models.CharField(max_length=50)
-    main_text = models.CharField(max_length=300)
-    update_date = models.DateTimeField('date published')
+    # title = models.CharField(max_length=50)
+    # main_text = models.CharField(max_length=300)
+    # update_date = models.DateTimeField('date published')
 
 class TodoForm(ModelForm):
     class Meta:
         model = Todo
         fields = ['todo_id', 'title', 'main_text', 'update_date']
         exclude = ['todo_id', 'update_date']
+
+
+##自作のフォーム
+class Jisaku(models.Model):
+    url = models.URLField(max_length = 200)

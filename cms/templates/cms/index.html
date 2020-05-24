@@ -2,8 +2,10 @@
 <head></head>
 <body>
   <a href="/todos/new/">登録</a>
+<!--  todoリストにものが入ってるかどうか確認して入ってたら表を表示-->
   {% if todo_list %}
     <table>
+<!--      ここに登録しものの表が作られ，削除ボタンも作られています-->
       <tr>
         <td>id</td>
         <td>title</td>
@@ -18,6 +20,7 @@
       {% endfor %}
     </table>
   {% else %}
+<!--  何もなかったらNo todos と表示するように設定しています-->
       <p>No todos are available.</p>
   {% endif %}
   </body>
