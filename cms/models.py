@@ -151,14 +151,10 @@ class Todo(models.Model):
     # title = models.CharField(max_length=50)
     # main_text = models.CharField(max_length=300)
     # update_date = models.DateTimeField('date published')
-
+#
 class TodoForm(ModelForm):
-    class Meta:
-        model = Todo
-        fields = ['todo_id', 'title', 'main_text', 'update_date']
-        exclude = ['todo_id', 'update_date']
-
-
-##自作のフォーム
-class Jisaku(models.Model):
-    url = models.URLField(max_length = 200)
+     class Meta:
+         model = Todo
+         fields = ['todo_id']
+#         exclude = ['todo_id', 'update_date']
+#

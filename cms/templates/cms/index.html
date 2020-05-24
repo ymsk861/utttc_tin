@@ -1,21 +1,16 @@
 <html>
 <head></head>
 <body>
-  <a href="/todos/new/">登録</a>
 <!--  todoリストにものが入ってるかどうか確認して入ってたら表を表示-->
   {% if todo_list %}
     <table>
-<!--      ここに登録しものの表が作られ，削除ボタンも作られています-->
+<!--      ここに登録したものの表が作られ，削除ボタンも作られています-->
       <tr>
         <td>id</td>
-        <td>title</td>
-        <td></td>
       </tr>
       {% for todo in todo_list %}
       <tr>
-        <td><a href="/todos/{{ todo.todo_id }}/">{{ todo.todo_id }}</a></td>
-        <td>{{ todo.title }}</td>
-        <td><a href="/todos/delete/{{ todo.todo_id }}/">削除</a></td>
+        <td>{{ todo.todo_id }}</td>
       </tr>
       {% endfor %}
     </table>
