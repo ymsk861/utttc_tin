@@ -133,13 +133,13 @@ class BookmarkView(View):
             }),
             content_type="application/json"
         )
-
+#
 # from django.http import HttpResponse, HttpResponseRedirect
 # from django.utils import timezone
 # from django.urls import reverse
 # from django.shortcuts import render
 # from cms.models import
-#
+# #
 # def index(request):
 #     todo_list =
 #     context = {'todo_list': todo_list}
@@ -213,7 +213,7 @@ def new(request):
 
 def add(request):
     t1 = Todo()
-    t1.todo_id = len(Todo.objects.order_by('-todo_id'))+1
+    t1.todo_id = 1
     t1.update_date = timezone.now()
     t = TodoForm(request.POST, instance=t1)
     t.save()
