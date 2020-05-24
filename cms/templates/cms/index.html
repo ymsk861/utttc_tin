@@ -2,21 +2,16 @@
 <head></head>
 <body>
 <!--  todoリストにものが入ってるかどうか確認して入ってたら表を表示-->
-  {% if todo_list %}
     <table>
 <!--      ここに登録したものの表が作られ，削除ボタンも作られています-->
       <tr>
         <td>id</td>
       </tr>
-      {% for todo in todo_list %}
+      {% for a in todo_list %}
       <tr>
-        <td>{{ todo.todo_id }}</td>
+        <td>{{ a.todo_id }}</td>
       </tr>
       {% endfor %}
     </table>
-  {% else %}
-<!--  何もなかったらNo todos と表示するように設定しています-->
-      <p>No todos are available.</p>
-  {% endif %}
   </body>
 </html>

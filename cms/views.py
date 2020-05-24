@@ -138,7 +138,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.utils import timezone
 from django.urls import reverse
 from django.shortcuts import render
-from cms.models import Todo, TodoForm
+from .models import Todo, TodoForm
 
 def index(request):
     todo_list = Todo.objects.all()

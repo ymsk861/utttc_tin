@@ -8,7 +8,7 @@
 <!--    main: <input type="text" name="main_text" value="{{ todo.main_text }}"/>-->
 <!--    <input type="hidden" name="user" value="userid=01"/>-->
 <!--    隠しフォームで入力します。入力内容はtodo.todo_id(models.pyのTodo classに定義されている)で，models.py中のtodo_idというハコに格納されます-->
-    <input type="hidden" name="todo_id" value="{{ todo.todo_id }}"/>
+    <input type="hidden" name="todo_id" value="{{ Todo.todo_id }}"/>
 <!--    いいねボタンで提出できます-->
     <input type="submit" value="いいね"/>
   </form>
