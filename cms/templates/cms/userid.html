@@ -16,11 +16,14 @@
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
+
+    {% for item in data %}
         <input id="anPageName" name="page" type="hidden" value="userid"/>
         <div class="userid anima-word-break ">
+
             <div style="width: 375px; height: 100%; position:relative; margin:auto;">
                 <div class="u30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecb">
-                    サークル紹介<br />サークル紹介<br />サークル紹介<br />サークル紹介<br />サークル紹介
+                    {{item.circle.content}}
                 </div>
                 <div class="rectangle">
                     <img alt="Image" anima-src="../static/images/userid-rectangle@2x.png" class="rectangle4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
@@ -39,17 +42,19 @@
                 <div class="rectangle2">
                 </div>
                 </a>
-                <div class="u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8">
-                    <span class="span1">ユーザ名</span><span class="span2"> </span><span class="span3">さんのマイリスト</span>
-                </div>
                 <img alt="Image" anima-src="../static/images/userid-rectangle-2.png" class="rectangle21" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <img alt="Image" anima-src="../static/images/userid-s156532740.png" class="s156532740" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <img alt="Image" anima-src="../static/images/userid-rectangle-1.png" class="rectangle3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <div class="u30b5u30fcu30afu30ebu540d">
-                    サークル名
+                    {{item.circle.name}}
+
+                </div>
+                <div class="u30e6u30fcu30b6u540du3055u3093u306eu30deu30a4u30eau30b9u30c8">
+                    <span class="span1">{{user.username}}</span><span class="span2"> </span><span class="span3">さんのマイリスト</span>
                 </div>
             </div>
         </div>
+    {% endfor %}
         <!-- Scripts -->
         <script>
             anima_isHidden = function(e) {

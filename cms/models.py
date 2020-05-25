@@ -108,66 +108,20 @@ class User(AbstractUser):
     class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"
 
-
-class Article(models.Model):
-    name = models.CharField("名前", max_length=100)
-
-
-class Comment(models.Model):
-    name = models.CharField("名前", max_length=100)
-
-
-class BookmarkBase(models.Model):
-    class Meta:
-        abstract = True
-    user = models.ForeignKey(User, verbose_name="User", on_delete = models.CASCADE)
-    def __str__(self):
-        return self.user.username
+class Circle(models.Model):
+    circle_id = models.IntegerField()
+    name = models.CharField(max_length=100)
+    photo_1 = models.CharField(max_length=200)
+    photo_2 = models.CharField(max_length=200)
+    photo_3 = models.CharField(max_length=200)
+    tag_1 = models.CharField(max_length=10)
+    tag_2 = models.CharField(max_length=10)
+    tag_3 = models.CharField(max_length=10)
+    content = models.TextField(max_length=1000)
+    mail = models.CharField(max_length=50)
+    twitter = models.CharField(max_length=50)
 
 class Like(models.Model):
-    user = models.IntegerField()#ハコを作る
-    circle = models.IntegerField()#ハコを作る
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='like_user')
+    circle = models.ForeignKey(Circle, on_delete=models.CASCADE, related_name='liked_circle')
 
-
-
-class BookmarkArticle(BookmarkBase):
-    class Meta:
-        db_table = "bookmark_article"
-    obj = models.ForeignKey(Article, verbose_name="Article", on_delete = models.CASCADE)
-
-class BookmarkComment(BookmarkBase):
-    class Meta:
-        db_table = "bookmark_comment"
-    obj = models.ForeignKey(Comment, verbose_name="Comment", on_delete = models.CASCADE)
-
-
-from django.db import models
-from django.forms import ModelForm
-
-# Create your models here.
-#
-# class
-#     todo_id = models.CharField(primary_key=True, max_length=5)
-#     # title = models.CharField(max_length=50)
-#     # main_text = models.CharField(max_length=300)
-#     # update_date = models.DateTimeField('date published')
-# #
-# class TodoForm(ModelForm):
-#      class Meta:
-#          model =
-#          fields = ['todo_id']#fields = ['todo_id', 'title', 'main_text', 'update_date']
-# #         exclude = ['todo_id', 'update_date']# exclude = ['todo_id', 'update_date']
-
-
-
-class Todo(models.Model):
-    todo_id = models.CharField(primary_key=True, max_length=5)
-    title = models.CharField(max_length=50)
-    main_text = models.CharField(max_length=300)
-    update_date = models.DateTimeField('date published')
-
-class TodoForm(ModelForm):
-     class Meta:
-         model = Todo
-         fields = ['todo_id', 'title', 'main_text', 'update_date']
-         exclude = ['todo_id', 'update_date']

@@ -7,8 +7,8 @@
 .userid {
   width               : 100%;
   min-width           : 375px;
-  height              : 100vh;
-  min-height          : 1328px;
+  height              : 50vh;
+  min-height          : 400px;
   position            : relative;
   overflow            : hidden;
   margin              : 0px;
