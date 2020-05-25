@@ -107,3 +107,24 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
 class User(AbstractUser):
     class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"
+
+
+###########################################
+###########################################
+
+from django.db import models
+from django.forms import ModelForm
+
+# Create your models here.
+
+class Todo(models.Model):
+    todo_id = models.CharField(primary_key=True, max_length=5)
+    title = models.CharField(max_length=50)
+    main_text = models.CharField(max_length=300)
+    update_date = models.DateTimeField('date published')
+
+class TodoForm(ModelForm):
+    class Meta:
+        model = Todo
+        fields = ['todo_id', 'title', 'main_text', 'update_date']
+        exclude = ['todo_id', 'update_date']
