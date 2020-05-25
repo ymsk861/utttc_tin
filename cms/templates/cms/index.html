@@ -1,0 +1,41 @@
+<!--<html>-->
+<!--<head></head>-->
+<!--<body>-->
+<!--&lt;!&ndash;  todoリストにものが入ってるかどうか確認して入ってたら表を表示&ndash;&gt;-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--    <table>-->
+<!--&lt;!&ndash;      ここに登録したものの表が作られ，削除ボタンも作られています&ndash;&gt;-->
+<!--      <tr>-->
+<!--        <td>id</td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--      </tr>-->
+<!--      -->
+<!--    </table>-->
+<!--&lt;!&ndash; &ndash;&gt;-->
+<!--&lt;!&ndash;  何もなかったらNo todos と表示するように設定しています&ndash;&gt;-->
+<!--&lt;!&ndash;      <p>No todos are available.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  &ndash;&gt;-->
+<!--  </body>-->
+<!--</html>-->
+
+
+<!--初期値は-->
+<html>
+<head></head>
+<body>
+  <a href="/new">登録</a>
+    <table>
+      <tr>
+        <td>id</td>
+        <td>title</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="/cms/{{ todo.todo_id }}/">{{ todo.todo_id }}</a></td>
+        <td>{{ todo.title }}</td>
+        <td><a href="/delete/{{ todo.todo_id }}/">削除</a></td>
+      </tr>
+    </table>
+  </body>
+</html>
