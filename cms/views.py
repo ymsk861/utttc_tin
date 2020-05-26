@@ -20,68 +20,70 @@ from django.views.generic.edit import (
     CreateView, UpdateView, DeleteView,
 )
 
-from .models import (Circle,Like)
+from .models import (Circle, Like, LikeForm)
+import random
 
 UserModel = get_user_model()
+x = 1
 
 def index1(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-1-1.html', params)
 
 def index2(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-1-2.html', params)
 
 def index3(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-1-3.html', params)
 
 def index21(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-2-1.html', params)
 
 def index22(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-2-2.html', params)
 
 def index23(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-2-3.html', params)
 
 def index31(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-3-1.html', params)
 
 def index32(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-3-2.html', params)
 
 def index33(request):
-    data = Circle.objects.filter(circle_id=1)
+    data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
     }
@@ -93,6 +95,22 @@ def mylist(request):
         'data':data
     }
     return render(request, 'cms/userid.html', params)
+
+def add(request):
+    global x
+    t1 = Like()
+    t1.user = request.user
+    circle = Circle.objects.get(circle_id=x)
+    t1.circle = circle
+    t = LikeForm(request.POST, instance=t1)
+    t.save()
+    x = random.randint(1,3)
+    return HttpResponseRedirect('../')
+
+def dislike(request):
+    global x
+    x = random.randint(1, 3)
+    return HttpResponseRedirect('../')
 
 class Login(LoginView):
     form_class = LoginForm
