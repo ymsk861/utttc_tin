@@ -68,22 +68,22 @@ def index23(request):
     }
     return render(request, 'cms/circleid-2-3.html', params)
 
-def index31(request):
-    data = Circle.objects.filter(circle_id=x)
+def index31(request, circle_id):
+    data = Circle.objects.filter(circle_id=circle_id)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-3-1.html', params)
 
-def index32(request):
-    data = Circle.objects.filter(circle_id=x)
+def index32(request, circle_id):
+    data = Circle.objects.filter(circle_id=circle_id)
     params = {
         'data':data
     }
     return render(request, 'cms/circleid-3-2.html', params)
 
-def index33(request):
-    data = Circle.objects.filter(circle_id=x)
+def index33(request, circle_id):
+    data = Circle.objects.filter(circle_id=circle_id)
     params = {
         'data':data
     }
@@ -155,5 +155,6 @@ class UserDelete(OnlyYouMixin, DeleteView):
     model = UserModel
     template_name = 'cms/user_delete.html'
     success_url = reverse_lazy('cms:top')
+
 
 
