@@ -112,10 +112,10 @@ class User(AbstractUser):
 class Circle(models.Model):
     circle_id = models.IntegerField()
     name = models.CharField(max_length=100)
-    photo_1 = models.CharField(max_length=200)
-    photo_2 = models.CharField(max_length=200)
-    photo_3 = models.CharField(max_length=200)
-    tag_1 = models.CharField(max_length=10)
+    photo_1 = models.ImageField(upload_to='images/')
+    photo_2 = models.ImageField(upload_to='images/')
+    photo_3 = models.ImageField(upload_to='images/')
+    tag_1 = models.ImageField(max_length=10)
     tag_2 = models.CharField(max_length=10)
     tag_3 = models.CharField(max_length=10)
     content = models.TextField(max_length=1000)
@@ -131,5 +131,6 @@ class LikeForm(ModelForm):
         model = Like
         fields = ['user', 'circle']
         exclude = ['user', 'circle']
+
 
 
