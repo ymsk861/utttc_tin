@@ -8,6 +8,7 @@ from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.core.mail import send_mail
 from django.db import models
+from django.forms import ModelForm
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
@@ -107,3 +108,28 @@ class AbstractUser(AbstractBaseUser, PermissionsMixin):
 class User(AbstractUser):
     class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"
+
+class Circle(models.Model):
+    circle_id = models.IntegerField()
+    name = models.CharField(max_length=100)
+    photo_1 = models.CharField(max_length=200)
+    photo_2 = models.CharField(max_length=200)
+    photo_3 = models.CharField(max_length=200)
+    tag_1 = models.CharField(max_length=10)
+    tag_2 = models.CharField(max_length=10)
+    tag_3 = models.CharField(max_length=10)
+    content = models.TextField(max_length=1000)
+    mail = models.CharField(max_length=50)
+    twitter = models.CharField(max_length=50)
+
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='like_user')
+    circle = models.ForeignKey(Circle, on_delete=models.CASCADE, related_name='liked_circle')
+
+class LikeForm(ModelForm):
+    class Meta:
+        model = Like
+        fields = ['user', 'circle']
+        exclude = ['user', 'circle']
+
+

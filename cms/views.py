@@ -3,7 +3,7 @@ from django.contrib.auth.views import (
     LoginView, LogoutView,
 )
 from django.http import HttpResponseRedirect
-from django.shortcuts import resolve_url
+from django.shortcuts import resolve_url, render
 from django.urls import reverse_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import (
@@ -20,41 +20,97 @@ from django.views.generic.edit import (
     CreateView, UpdateView, DeleteView,
 )
 
+from .models import (Circle, Like, LikeForm)
+import random
+
 UserModel = get_user_model()
+x = 1
 
+def index1(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-1-1.html', params)
 
-class TopView(TemplateView):
-    template_name = 'cms/circleid-1-1.html'
+def index2(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-1-2.html', params)
 
-class Next11View(TemplateView):
-    template_name = 'cms/circleid-1-1.html'
+def index3(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-1-3.html', params)
 
-class Next12View(TemplateView):
-    template_name = 'cms/circleid-1-2.html'
+def index21(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-2-1.html', params)
 
-class Next13View(TemplateView):
-    template_name = 'cms/circleid-1-3.html'
+def index22(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-2-2.html', params)
 
-class Next21View(TemplateView):
-    template_name = 'cms/circleid-2-1.html'
+def index23(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-2-3.html', params)
 
-class Next22View(TemplateView):
-    template_name = 'cms/circleid-2-2.html'
+def index31(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-3-1.html', params)
 
-class Next23View(TemplateView):
-    template_name = 'cms/circleid-2-3.html'
+def index32(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-3-2.html', params)
 
-class Next31View(TemplateView):
-    template_name = 'cms/circleid-3-1.html'
+def index33(request):
+    data = Circle.objects.filter(circle_id=x)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/circleid-3-3.html', params)
 
-class Next32View(TemplateView):
-    template_name = 'cms/circleid-3-2.html'
+def mylist(request):
+    data = Like.objects.filter(user=request.user)
+    params = {
+        'data':data
+    }
+    return render(request, 'cms/userid.html', params)
 
-class Next33View(TemplateView):
-    template_name = 'cms/circleid-3-3.html'
+def add(request):
+    global x
+    t1 = Like()
+    t1.user = request.user
+    circle = Circle.objects.get(circle_id=x)
+    t1.circle = circle
+    t = LikeForm(request.POST, instance=t1)
+    t.save()
+    x = random.randint(1,3)
+    return HttpResponseRedirect('../')
 
-class NextuseridView(TemplateView):
-    template_name = 'cms/userid.html'
+def dislike(request):
+    global x
+    x = random.randint(1, 3)
+    return HttpResponseRedirect('../')
 
 class Login(LoginView):
     form_class = LoginForm
@@ -99,3 +155,5 @@ class UserDelete(OnlyYouMixin, DeleteView):
     model = UserModel
     template_name = 'cms/user_delete.html'
     success_url = reverse_lazy('cms:top')
+
+

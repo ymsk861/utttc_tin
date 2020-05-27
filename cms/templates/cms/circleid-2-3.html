@@ -16,18 +16,19 @@
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
+    {% for item in data %}
         <input id="anPageName" name="page" type="hidden" value="circleid23"/>
         <div class="circleid23 anima-word-break ">
             <div style="width: 375px; height: 100%; position:relative; margin:auto;">
                 <div class="u8a73u7d30u8aacu660e">
-                    詳細説明<br />
+                    {{item.content}}
                 </div>
                 <div class="rectangle">
                 </div>
-                <img alt="Image" anima-src="../static/images/circleid-3-3-s156532740.png" class="s156532740" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <img alt="Image" anima-src="{{item.photo_2}}" class="s156532740" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <img alt="Image" anima-src="../static/images/circleid-2-3-rectangle.png" class="rectangle1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <div class="u30b5u30fcu30afu30ebu540d">
-                    サークル名
+                    {{item.name}}
                 </div>
                 <a href="javascript:history.back()">
                     <div class="u25b3close">
@@ -36,6 +37,7 @@
                 </a>
             </div>
         </div>
+    {% endfor %}
         <!-- Scripts -->
         <script>
             anima_isHidden = function(e) {
