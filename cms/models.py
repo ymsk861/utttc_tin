@@ -8,6 +8,7 @@ from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.core.mail import send_mail
 from django.db import models
+from django.forms import ModelForm
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
@@ -124,4 +125,11 @@ class Circle(models.Model):
 class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='like_user')
     circle = models.ForeignKey(Circle, on_delete=models.CASCADE, related_name='liked_circle')
+
+class LikeForm(ModelForm):
+    class Meta:
+        model = Like
+        fields = ['user', 'circle']
+        exclude = ['user', 'circle']
+
 
