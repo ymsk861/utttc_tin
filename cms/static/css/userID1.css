@@ -40,18 +40,18 @@ div {
 .userid .u30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecbu30b5u30fcu30afu30ebu7d39u4ecb {
   background-color    : rgba(255,255,255,0.0);
   top                 : 324px;
-  height              : 500px;
-  width               : 283px;
+  height              : 700px;
+  width               : 380px;
   position            : relative;
   margin              : 0;
-  left                : 46px;
+  left                : 0px;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
   font-size           : 10.5px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 12px;
+  line-height         : 15px;
 }
 .userid .rectangle {
   background-color    : rgba(255,255,255,0.0);
