@@ -12,7 +12,7 @@ from django.forms import ModelForm
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
-
+#from FileExtensionValidator import views
 # User-related
 class UserManager(BaseUserManager):
     use_in_migrations = True
@@ -112,10 +112,10 @@ class User(AbstractUser):
 class Circle(models.Model):
     circle_id = models.IntegerField()
     name = models.CharField(max_length=100)
-    photo_1 = models.CharField(max_length=200)
-    photo_2 = models.CharField(max_length=200)
-    photo_3 = models.CharField(max_length=200)
-    tag_1 = models.CharField(max_length=10)
+    photo_1 = models.CharField(max_length=50)
+    photo_2 = models.CharField(max_length=50)
+    photo_3 = models.CharField(max_length=50)
+    tag_1 = models.CharField(max_length=50)
     tag_2 = models.CharField(max_length=10)
     tag_3 = models.CharField(max_length=10)
     content = models.TextField(max_length=1000)
@@ -132,4 +132,9 @@ class LikeForm(ModelForm):
         fields = ['user', 'circle']
         exclude = ['user', 'circle']
 
+#attach = models.FileField(
+#        upload_to='cms/static/images/',
+#        verbose_name='添付ファイル',
+#        validators=[FileExtensionValidator(['pdf', ])],
+#    )
 

@@ -11,13 +11,18 @@
         <link href="../static/images/favicon.png" rel="shortcut icon"/>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
-        <link href="../static/css/userID.css" rel="stylesheet" type="text/css"/>
+        <link href="../static/css/userID1.css" rel="stylesheet" type="text/css"/>
         <meta content="AnimaApp.com - Design to code, Automated." name="author"/>
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
     <div class="username">{% if data %}{{user.username}} さんのマイリスト{% endif %}</div>
-    <img alt="Image" anima-src="../static/images/userid-u77e2u5370u30a2u30a4u30b3u30f3u3000u5de62@2x.png" class="u77e2u5370u30a2u30a4u30b3u30f3u3000u5de62" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+    <a href="../">
+        <img alt="Image" anima-src="../static/images/userid-u77e2u5370u30a2u30a4u30b3u30f3u3000u5de62@2x.png" class="u77e2u5370u30a2u30a4u30b3u30f3u3000u5de62" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+    </a>
     <a href="/">
         <div class="rectangle2">
         </div>
@@ -31,14 +36,14 @@
                     {{item.circle.content}}
                 </div>
                 <div class="rectangle">
-                    <img alt="Image" anima-src="../static/images/userid-rectangle@2x.png" class="rectangle4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <div class="more">
-                        more
-                    </div>
-                    <a href="/circleid-3-1">
+                    <!--<a href="/circleid-3-1">
+                        <img alt="Image" anima-src="../static/images/userid-rectangle@2x.png" class="rectangle4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        <div class="more">
+                            more
+                        </div>
                         <div class="rectangle11">
                         </div>
-                    </a>
+                    </a>-->
                 </div>
                 <div class="rectangle1">
                 </div>
@@ -47,7 +52,6 @@
                 <img alt="Image" anima-src="../static/images/userid-rectangle-1.png" class="rectangle3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 <div class="u30b5u30fcu30afu30ebu540d">
                     {{item.circle.name}}
-
                 </div>
             </div>
         </div>
