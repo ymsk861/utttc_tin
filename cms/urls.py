@@ -8,7 +8,7 @@ from . import views
 app_name = 'cms'
 
 urlpatterns = [
-    path('', views.Login.as_view(), name='login'),
+    path('', views.index1, name='top'),
     path('circleid-1-2/', views.index2, name='circleid-1-2'),
     path('circleid-1-3/', views.index3, name='circleid-1-3'),
     path('circleid-2-1/', views.index21, name='circleid-2-1'),
@@ -18,7 +18,7 @@ urlpatterns = [
     path('circleid-3-2/<int:circle_id>/', views.index32, name='circleid-3-2'),
     path('circleid-3-3/<int:circle_id>/', views.index33, name='circleid-3-3'),
     path('userid/', views.mylist, name='userid'),
-    #path('login/', views.Login.as_view(), name='login'),
+    path('login/', views.Login.as_view(), name='login'),
     path('logout/', views.Logout.as_view(), name='logout'),
     path('signup/', views.UserCreate.as_view(), name='signup'),
     path('user/<int:pk>/update/', views.UserUpdate.as_view(), name='user_update'),
