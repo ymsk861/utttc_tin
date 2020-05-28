@@ -3,7 +3,7 @@ from .common import *
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'utic-env.eba-ntqmhdkd.us-east-2.elasticbeanstalk.com',
+    'utic-env.eba-jdf8pqhu.ap-northeast-1.elasticbeanstalk.com',
 ]
 
 

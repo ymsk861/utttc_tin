@@ -35,18 +35,18 @@ div {
 .circleid31 .u8a73u7d30u8aacu660e {
   background-color    : rgba(255,255,255,0.0);
   top                 : 236px;
-  height              : auto;
+  height              : 32000px;
   width               : 350px;
-  position            : absolute;
+  position            : relative;
   margin              : 0;
   left                : 13px;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
-  font-size           : 16.0px;
+  font-size           : 12.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : center;
-  line-height         : 24.0px;
+  line-height         : 20.0px;
 }
 .circleid31 .rectangle {
   background-color    : rgba(215, 215, 215, 0.0);
