@@ -175,6 +175,7 @@ div {
   left                : 319px;
   transform           : rotate(0deg);
   opacity             : 1.0;
+  z-index             : 4;
 }
 /* .anima-animate-appear prefix for appear animations */
 .anima-animate-appear {

@@ -119,8 +119,8 @@ class Circle(models.Model):
     tag_2 = models.CharField(max_length=10)
     tag_3 = models.CharField(max_length=10)
     content = models.TextField(max_length=2000)
-    mail = models.CharField(max_length=50)
-    twitter = models.CharField(max_length=50)
+    mail = models.CharField(max_length=50, blank=True, null=True)
+    twitter = models.CharField(max_length=50, blank=True, null=True)
 
 class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='like_user')
