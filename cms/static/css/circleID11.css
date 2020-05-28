@@ -1,0 +1,534 @@
+
+@font-face {
+                          font-family: "mplus-1c-medium";
+                          src: url('../fonts/mplus-1c-medium.ttf') format("truetype");
+                        }
+
+.circleid11 {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 667px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+  opacity             : 1.0;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.circleid11 .app {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 134px;
+  position            : absolute;
+  margin              : 0;
+  left                : 121px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "Impact", Helvetica, Arial, serif;
+  font-size           : 40.0px;
+  color               : rgba(255, 136, 78, 1.0);
+  text-align          : center;
+  line-height         : 48.0px;
+}
+.circleid11 .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 580px;
+  height              : 73px;
+  width               : 73px;
+  position            : absolute;
+  margin              : 0;
+  left                : 212px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 580px;
+  height              : 66px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 212px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval1 .oval6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 66px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval1 .u3044u3044u306du306eu624bu306eu30a2u30a4u30b3u30f3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 41px;
+  width               : 41px;
+  position            : absolute;
+  margin              : 0;
+  left                : 13px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval1 .oval11 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 66px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 580px;
+  height              : 73px;
+  width               : 73px;
+  position            : absolute;
+  margin              : 0;
+  left                : 91px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 580px;
+  height              : 66px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 91px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval3 .oval6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 66px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval3 .u30ceu30fcu30deu30ebu306eu592au3055u306eu30cfu3099u30c4u30a2u30a4u30b3u30f3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 41px;
+  width               : 41px;
+  position            : absolute;
+  margin              : 0;
+  left                : 13px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval3 .oval11 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 66px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 28px;
+  height              : 52px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 278px;
+  overflow            : hidden;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle .rectangle6 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 2px;
+  height              : 50px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle .u30d5u30a9u30ebu30bfu3099u30a2u30a4u30b3u30f314 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 67px;
+  height              : 526px;
+  width               : 299px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .s156532740 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 87px;
+  height              : 482px;
+  width               : 299px;
+  position            : absolute;
+  margin              : 0;
+  left                : 35px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .s156532740 .s1565327401 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 482px;
+  width               : 299px;
+  object-fit          : cover;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .s156532740 .rectangle6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : 362px;
+  width               : 299px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 7px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 451px;
+  height              : 120px;
+  width               : 304px;
+  position            : absolute;
+  margin              : 0;
+  left                : 33px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .u30b5u30fcu30afu30ebu540d {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 464px;
+  height              : auto;
+  width               : 281px;
+  position            : absolute;
+  margin              : 0;
+  left                : 49px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "HiraginoSans-W8", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 36.0px;
+}
+.circleid11 .oval21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 107px;
+  height              : 13px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 182px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 107px;
+  height              : 13px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 220px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .oval5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 107px;
+  height              : 13px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 142px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .u25bdmore {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 540px;
+  height              : auto;
+  width               : 62px;
+  position            : absolute;
+  margin              : 0;
+  left                : 151px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 16.0px;
+}
+.circleid11 .u25bdmore .span1 {
+  line-height         : 24.0px;
+}
+.circleid11 .u25bdmore .span2 {
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  line-height         : 19.0px;
+}
+.circleid11 .rectangle3 {
+  background-color    : rgba(255, 255, 255, 0.85);
+  top                 : 504px;
+  height              : 23px;
+  width               : 90px;
+  position            : absolute;
+  margin              : 0;
+  left                : 140px;
+  border-radius       : 7px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle4 {
+  background-color    : rgba(255, 255, 255, 0.85);
+  top                 : 504px;
+  height              : 23px;
+  width               : 90px;
+  position            : absolute;
+  margin              : 0;
+  left                : 233px;
+  border-radius       : 7px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .rectangle5 {
+  background-color    : rgba(255, 255, 255, 0.85);
+  top                 : 504px;
+  height              : 23px;
+  width               : 90px;
+  position            : absolute;
+  margin              : 0;
+  left                : 47px;
+  border-radius       : 7px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+}
+.circleid11 .u30bfu30b02 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 503px;
+  height              : auto;
+  width               : 80px;
+  position            : absolute;
+  margin              : 0;
+  left                : 145px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "mplus-1c-medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(85, 85, 85, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.circleid11 .u30bfu30b03 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 503px;
+  height              : auto;
+  width               : 80px;
+  position            : absolute;
+  margin              : 0;
+  left                : 238px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "mplus-1c-medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(85, 85, 85, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+.circleid11 .u30bfu30b01 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 503px;
+  height              : auto;
+  width               : 80px;
+  position            : absolute;
+  margin              : 0;
+  left                : 51px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  font-family         : "mplus-1c-medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(85, 85, 85, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+
+  {
+      opacity: 0;
+    }
+
+
+  100%
+
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+
+  {
+      opacity: 0;
+    }
+
+
+  100%
+
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+
+  {
+      opacity: 0;
+    }
+
+
+  100%
+
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+
+  {
+      opacity: 0;
+    }
+
+
+  100%
+
+  {
+      opacity: 1;
+    }
+}
+.anima-component-wrapper,
+.anima-component-wrapper * {
+  pointer-events      : none;
+}
+.anima-component-wrapper a *,
+.anima-component-wrapper a,
+.anima-component-wrapper input,
+.anima-component-wrapper video,
+.anima-component-wrapper iframe,
+.anima-listeners-active,
+.anima-listeners-active * {
+  pointer-events      : auto;
+}
+.anima-hidden,
+.anima-hidden * {
+  visibility          : hidden;
+  pointer-events      : none;
+}
+.anima-smart-layers-pointers,
+.anima-smart-layers-pointers * {
+  pointer-events      : auto;
+  visibility          : visible;
+}
+.anima-component-wrapper.anima-not-ready,
+.anima-component-wrapper.anima-not-ready * {
+  visibility          : hidden !important;
+}
+.anima-listeners-active-click,
+.anima-listeners-active-click * {
+  cursor              : pointer;
+}
+.anima-word-break {
+  overflow-wrap       : break-word;
+  word-wrap           : break-word;
+  word-break          : break-all;
+  word-break          : break-word;
+}

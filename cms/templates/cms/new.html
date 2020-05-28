@@ -1,0 +1,25 @@
+<!--<html>-->
+<!--<head></head>-->
+<!--<body>-->
+<!--&lt;!&ndash;ここを修正。action=でデータの渡し先を指定しています&ndash;&gt;-->
+<!--  <form action="../add/" method="post">-->
+<!--    }-->
+<!--&lt;!&ndash;    隠しフォームで入力します。入力内容はtodo.todo_id(models.pyのTodo classに定義されている)で，models.py中のtodo_idというハコに格納されます&ndash;&gt;-->
+<!--    <input type="hidden" name="todo_id" value=""/>-->
+<!--&lt;!&ndash;    いいねボタンで提出できます&ndash;&gt;-->
+<!--    <input type="submit" value="いいね"/>-->
+<!--  </form>-->
+<!--</body>-->
+<!--</html>-->
+
+<html>
+<head></head>
+<body>
+  <form action="../add/{% if todo %}{{ todo.todo_id }}/{% endif %}" method="post">
+    {% csrf_token %}
+    title: <input type="text" name="title" value="{{ todo.title }}"/>
+    main: <input type="text" name="main_text" value="{{ todo.main_text }}"/>
+    <input type="hidden" name="todo_id" value="{{ todo.todo_id }}"/>
+    <input type="submit" value="登録"/>
+  </form>
+</body>
