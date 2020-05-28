@@ -115,6 +115,7 @@ def add(request):
     t1.circle = circle
     t = LikeForm(request.POST, instance=t1)
     t.save()
+    l = random.sample(range(1, count + 1), k=count)
     for i in l:
         if not(Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
             x = i
@@ -125,6 +126,7 @@ def add(request):
 
 def dislike(request):
     global x
+    l = random.sample(range(1, count + 1), k=count)
     for i in l:
         if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
             x = i
