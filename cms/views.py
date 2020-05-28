@@ -109,7 +109,7 @@ def add(request):
 
 def dislike(request):
     global x
-    x = random.randint(1, 3)
+    x = random.randint(1, 11)
     return HttpResponseRedirect('../')
 
 class Login(LoginView):
