@@ -416,6 +416,13 @@ div {
   text-align          : center;
   line-height         : 27.0px;
 }
+.circleid11 .no_circle{
+  top                 : 100px;
+  position            : absolute;
+  margin-left         : 18%;
+  font-family         : "mplus-1c-medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+}
 /* .anima-animate-appear prefix for appear animations */
 .anima-animate-appear {
   opacity             : 0;
