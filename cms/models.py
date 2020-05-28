@@ -112,13 +112,13 @@ class User(AbstractUser):
 class Circle(models.Model):
     circle_id = models.IntegerField()
     name = models.CharField(max_length=100)
-    photo_1 = models.CharField(max_length=50)
-    photo_2 = models.CharField(max_length=50)
-    photo_3 = models.CharField(max_length=50)
+    photo_1 = models.CharField(max_length=150)
+    photo_2 = models.CharField(max_length=150)
+    photo_3 = models.CharField(max_length=150)
     tag_1 = models.CharField(max_length=50)
     tag_2 = models.CharField(max_length=10)
     tag_3 = models.CharField(max_length=10)
-    content = models.TextField(max_length=1000)
+    content = models.TextField(max_length=2000)
     mail = models.CharField(max_length=50)
     twitter = models.CharField(max_length=50)
 
