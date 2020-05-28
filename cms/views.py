@@ -24,9 +24,19 @@ from .models import (Circle, Like, LikeForm)
 import random
 
 UserModel = get_user_model()
+count = Circle.objects.all().count()
+l = random.sample(range(1,count+1), k=count)
 x = 1
 
 def index1(request):
+    global x
+    for i in l:
+        if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+            if x == 0:
+                x = i
+            break
+    else:
+        x = 0
     data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
@@ -104,12 +114,24 @@ def add(request):
     t1.circle = circle
     t = LikeForm(request.POST, instance=t1)
     t.save()
-    x = random.randint(1,3)
+    l = random.sample(range(1, count + 1), k=count)
+    for i in l:
+        if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+            x = i
+            break
+    else:
+        x = 0
     return HttpResponseRedirect('../')
 
 def dislike(request):
     global x
-    x = random.randint(1, 11)
+    l = random.sample(range(1, count + 1), k=count)
+    for i in l:
+        if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+            x = i
+            break
+    else:
+        x = 0
     return HttpResponseRedirect('../')
 
 class Login(LoginView):
@@ -157,4 +179,7 @@ class UserDelete(OnlyYouMixin, DeleteView):
     success_url = reverse_lazy('cms:top')
 
 
+def delete(request, circle_id):
+    Like.objects.filter(user=request.user, circle__circle_id=circle_id).delete()
+    return HttpResponseRedirect('../../userid')
 
