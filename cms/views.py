@@ -30,6 +30,7 @@ x = 1
 
 def index1(request):
     global x
+    l = random.sample(range(1, count + 1), k=count)
     for i in l:
         if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
             if x == 0:
