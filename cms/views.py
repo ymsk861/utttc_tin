@@ -184,3 +184,5 @@ def delete(request, circle_id):
     Like.objects.filter(user=request.user, circle__circle_id=circle_id).delete()
     return HttpResponseRedirect('../../userid')
 
+class AboutView(TemplateView):
+    template_name = 'cms/about.html'

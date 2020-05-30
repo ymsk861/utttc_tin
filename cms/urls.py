@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 
@@ -27,5 +27,6 @@ urlpatterns = [
     path('user/<int:pk>/delete/', views.UserDelete.as_view(), name='user_delete'),
     path('add/', views.add, name='add'),
     path('dislike/', views.dislike, name='dislike'),
-    path('delete/<int:circle_id>/', views.delete, name='delete')
+    path('delete/<int:circle_id>/', views.delete, name='delete'),
+    path('about/', views.AboutView.as_view(), name='about'),
 ]

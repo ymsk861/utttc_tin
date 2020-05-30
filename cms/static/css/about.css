@@ -1,0 +1,14 @@
+h1 {
+  padding: 0.5em;/*文字周りの余白*/
+  color: #494949;/*文字色*/
+  background: #fffaf4;/*背景色*/
+  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  font-size: 150%;
+  font-weight: bolder;
+}
+
+#main{
+    width: 40%; /*横幅指定*/
+    margin-left: 30%; /*左端から30%右側に動かす*/
+    overflow: hidden; /*おまじない*/
+}
