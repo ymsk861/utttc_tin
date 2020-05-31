@@ -26,18 +26,29 @@ import random
 UserModel = get_user_model()
 count = Circle.objects.all().count()
 l = random.sample(range(1,count+1), k=count)
+number = 0
 x = 1
 
 def index1(request):
     global x
-    l = random.sample(range(1, count + 1), k=count)
-    for i in l:
-        if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
-            if x == 0:
-                x = i
+    global l
+    global number
+    time = 1
+    while True:
+        i = l[number]
+        if time > count:
+            x = 0
             break
-    else:
-        x = 0
+        elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+            x = i
+            break
+        elif number < count - 1:
+            number += 1
+            time += 1
+        else:
+            number = 0
+            time += 1
+            l = random.sample(range(1, count + 1), k=count)
     data = Circle.objects.filter(circle_id=x)
     params = {
         'data':data
@@ -109,30 +120,57 @@ def mylist(request):
 
 def add(request):
     global x
+    global number
+    global l
     t1 = Like()
     t1.user = request.user
     circle = Circle.objects.get(circle_id=x)
     t1.circle = circle
     t = LikeForm(request.POST, instance=t1)
     t.save()
-    l = random.sample(range(1, count + 1), k=count)
-    for i in l:
-        if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+    time = 1
+    while True:
+        i = l[number]
+        if time > count:
+            x = 0
+            break
+        elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
             x = i
             break
-    else:
-        x = 0
+        elif number < count-1:
+            number += 1
+            time += 1
+        else:
+            number = 0
+            time += 1
+            l = random.sample(range(1, count + 1), k=count)
     return HttpResponseRedirect('../')
 
 def dislike(request):
     global x
-    l = random.sample(range(1, count + 1), k=count)
-    for i in l:
-        if not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
-            x = i
+    global number
+    global l
+    time = 1
+    while True:
+        i = l[number]
+        if time > count:
+            x = 0
             break
-    else:
-        x = 0
+        elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+            x = i
+            if number < count - 1:
+                number += 1
+            else:
+                l = random.sample(range(1, count + 1), k=count)
+                number = 0
+            break
+        elif number < count - 1:
+            number += 1
+            time += 1
+        else:
+            number = 0
+            time += 1
+            l = random.sample(range(1, count + 1), k=count)
     return HttpResponseRedirect('../')
 
 class Login(LoginView):
