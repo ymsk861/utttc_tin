@@ -224,3 +224,9 @@ def delete(request, circle_id):
 
 class AboutView(TemplateView):
     template_name = 'cms/about.html'
+
+class KiyakuView(TemplateView):
+    template_name = 'cms/kiyaku.html'
+
+class PrivacyView(TemplateView):
+    template_name = 'cms/privacy.html'
