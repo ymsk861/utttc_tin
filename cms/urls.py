@@ -29,4 +29,6 @@ urlpatterns = [
     path('dislike/', views.dislike, name='dislike'),
     path('delete/<int:circle_id>/', views.delete, name='delete'),
     path('about/', views.AboutView.as_view(), name='about'),
+    path('kiyaku/', views.KiyakuView.as_view(), name='kiyaku'),
+    path('privacypolicy/', views.PrivacyView.as_view(), name='privacypolicy'),
 ]
