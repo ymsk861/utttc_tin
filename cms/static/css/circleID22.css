@@ -34,19 +34,19 @@ div {
 }
 .circleid22 .u8a73u7d30u8aacu660e {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 231px;
-  height              : auto;
-  width               : 340px;
-  position            : absolute;
+  top                 : 230px;
+  height              : 41000px;
+  width               : 365px;
+  position            : relative;
   margin              : 0;
   left                : 18px;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
-  font-size           : 16.0px;
+  font-size           : 12.0px;
   color               : rgba(0, 0, 0, 1.0);
-  text-align          : center;
-  line-height         : 24.0px;
+  text-align          : left;
+  line-height         : 17.0px;
 }
 .circleid22 .rectangle {
   background-color    : rgba(215, 215, 215, 1.0);
@@ -84,19 +84,19 @@ div {
 }
 .circleid22 .u30b5u30fcu30afu30ebu540d {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 159px;
+  top                 : 149px;
   height              : auto;
-  width               : 281px;
+  width               : 340px;
   position            : absolute;
   margin              : 0;
   left                : 18px;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W8", Helvetica, Arial, serif;
-  font-size           : 24.0px;
+  font-size           : 23.0px;
   color               : rgba(255, 255, 255, 1.0);
   text-align          : left;
-  line-height         : 36.0px;
+  line-height         : 35.0px;
 }
 .circleid22 .u25b3close {
   background-color    : rgba(255,255,255,0.0);
