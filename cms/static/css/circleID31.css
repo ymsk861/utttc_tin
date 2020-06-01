@@ -38,15 +38,15 @@ div {
   height              : 41000px;
   width               : 370px;
   position            : relative;
-  margin              : 0;
-  left                : 13px;
+  margin              : auto;
+  left                : 0;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
-  font-size           : 12.0px;
+  font-size           : 12.0pt;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 17.0px;
+  line-height         : 150%;
 }
 .circleid31 .rectangle {
   background-color    : rgba(215, 215, 215, 0.0);

@@ -43,15 +43,15 @@ div {
   height              : 475px;
   width               : 380px;
   position            : relative;
-  margin              : 0;
+  margin              : auto;
   left                : 0px;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
-  font-size           : 10.5px;
+  font-size           : 10.5pt;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 15px;
+  line-height         : 15pt;
 }
 .userid .delete{
    background-color    : rgba(255,255,255,0.0);
