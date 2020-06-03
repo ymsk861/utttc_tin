@@ -36,7 +36,7 @@ div {
   background-color    : rgba(255,255,255,0.0);
   top                 : 230px;
   height              : 41000px;
-  width               : 365px;
+  width               : 370px;
   position            : relative;
   margin              : auto;
   left                : 0;
@@ -46,7 +46,7 @@ div {
   font-size           : 12pt;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 150%;
+  line-height         : 17.0pt;
 }
 .circleid23 .rectangle {
   background-color    : rgba(215, 215, 215, 1.0);
