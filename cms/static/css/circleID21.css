@@ -37,7 +37,7 @@ div {
   top                 : 230px;
   height              : 41000px;
   width               : 370px;
-  position            : relative;
+  position            : absolute;
   margin              : auto;
   left                : 0;
   transform           : rotate(0deg);
