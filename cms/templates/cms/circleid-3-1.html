@@ -31,7 +31,7 @@
         <input id="anPageName" name="page" type="hidden" value="circleid31"/>
         <div class="circleid31 anima-word-break ">
             <div style="width: 375px; height: 41000px; position:relative; margin:auto;">
-                <div class="u8a73u7d30u8aacu660e js-autolink">
+                <div class="u8a73u7d30u8aacu660e">
                     {{item.content　| linebreaksbr}}
                 </div>
                 <a href="/circleid-3-2/{{item.circle_id}}">
@@ -64,11 +64,6 @@
     {% endfor %}
         <!-- Scripts -->
         <script>
-            $(function(){
-                $('.js-autolink').each(function(){
-                    $(this).html($(this).html().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig,"<a href='$1'>$1</a>"));
-                });
-            });
             anima_isHidden = function(e) {
                 if (!(e instanceof HTMLElement)) return !1;
                 if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
