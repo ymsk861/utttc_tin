@@ -43,10 +43,10 @@ div {
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
-  font-size           : 12.0pt;
+  font-size           : 12.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 17.0pt;
+  line-height         : 17.0px;
 }
 .circleid32 .rectangle {
   background-color    : rgba(215, 215, 215, 0.0);
