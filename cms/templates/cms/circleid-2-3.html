@@ -46,6 +46,11 @@
                         <span class="span1">△</span><span class="span2">close</span>
                     </div>
                 </a>
+                {% if item.twitter %}
+                 <a href="https://{{item.twitter}}">
+                 <img alt="Image" class="twitteru306eu30a2u30a4u30b3u30f3u7d20u6750u305du306e21" src="../static/images/circleid-3-1-twitteru306eu30a2u30a4u30b3u30f3u7d20u6750-u305du306e2-1@2x.png"/>
+                 </a>
+                 {% endif %}
             </div>
         </div>
     {% endfor %}
