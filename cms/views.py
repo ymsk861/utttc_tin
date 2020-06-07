@@ -121,11 +121,14 @@ def index33(request, circle_id):
     return render(request, 'cms/circleid-3-3.html', params)
 
 def mylist(request):
-    data = Like.objects.filter(user=request.user)
-    params = {
-        'data':data
-    }
-    return render(request, 'cms/userid.html', params)
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect('../signup/')
+    else:
+        data = Like.objects.filter(user=request.user)
+        params = {
+            'data':data
+        }
+        return render(request, 'cms/userid.html', params)
 
 def add(request):
     global x
