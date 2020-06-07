@@ -38,8 +38,8 @@ div {
   height              : 41000px;
   width               : 370px;
   position            : relative;
-  margin              : 0;
-  left                : 13px;
+  margin              : auto;
+  left                : 0;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;

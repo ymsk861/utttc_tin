@@ -2,11 +2,22 @@
 
 {% extends 'cms/base.html' %}
 
-{% block title %}2-1 | {% endblock %}
+<!--{% block title %}2-1 | {% endblock %}-->
 
 {% block content %}
 
 <html>
+
+<HEAD>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=“https://www.googletagmanager.com/gtag/js?id=UA-168591913-1”></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(‘js’, new Date());
+  gtag(‘config’, ‘UA-168591913-1’);
+</script>
+</HEAD>
     <head>
         <link href="../static/images/favicon.png" rel="shortcut icon"/>
         <meta charset="utf-8"/>
@@ -19,8 +30,8 @@
     {% for item in data %}
         <input id="anPageName" name="page" type="hidden" value="circleid21"/>
         <div class="circleid21 anima-word-break ">
-            <div style="width: 375px; height: 41000px; position:relative; margin:auto;">
-                <div class="u8a73u7d30u8aacu660e">
+            <div style="width: 375px; height: 50000px; position:relative; margin:auto;">
+                <div class="u8a73u7d30u8aacu660e" >
                     {{item.content| linebreaksbr}}
                 </div>
                 <div class="rectangle">
@@ -35,6 +46,11 @@
                         <span class="span1">△</span><span class="span2">close</span>
                     </div>
                 </a>
+                {% if item.twitter %}
+                 <a href="https://{{item.twitter}}">
+                 <img alt="Image" class="twitteru306eu30a2u30a4u30b3u30f3u7d20u6750u305du306e21" src="../static/images/circleid-3-1-twitteru306eu30a2u30a4u30b3u30f3u7d20u6750-u305du306e2-1@2x.png"/>
+                 </a>
+                 {% endif %}
             </div>
         </div>
     {% endfor %}

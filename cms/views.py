@@ -33,46 +33,55 @@ def index1(request):
     global x
     global l
     global number
-    time = 1
-    while True:
-        i = l[number]
-        if time > count:
-            x = 0
-            break
-        elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
-            x = i
-            break
-        elif number < count - 1:
-            number += 1
-            time += 1
-        else:
-            number = 0
-            time += 1
-            l = random.sample(range(1, count + 1), k=count)
+    if request.user.is_authenticated:
+        time = 1
+        while True:
+            i = l[number]
+            if time > count:
+                x = 0
+                break
+            elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+                x = i
+                break
+            elif number < count - 1:
+                number += 1
+                time += 1
+            else:
+                number = 0
+                time += 1
+                l = random.sample(range(1, count + 1), k=count)
     data = Circle.objects.filter(circle_id=x)
+    user = request.user
     params = {
-        'data':data
+        'data':data,
+        'user':user
     }
     return render(request, 'cms/circleid-1-1.html', params)
 
 def index2(request):
     data = Circle.objects.filter(circle_id=x)
+    user = request.user
     params = {
-        'data':data
+        'data':data,
+        'user':user
     }
     return render(request, 'cms/circleid-1-2.html', params)
 
 def index3(request):
     data = Circle.objects.filter(circle_id=x)
+    user = request.user
     params = {
-        'data':data
+        'data': data,
+        'user': user
     }
     return render(request, 'cms/circleid-1-3.html', params)
 
 def index21(request):
     data = Circle.objects.filter(circle_id=x)
+    user = request.user
     params = {
-        'data':data
+        'data': data,
+        'user': user
     }
     return render(request, 'cms/circleid-2-1.html', params)
 
@@ -122,41 +131,41 @@ def add(request):
     global x
     global number
     global l
-    t1 = Like()
-    t1.user = request.user
-    circle = Circle.objects.get(circle_id=x)
-    t1.circle = circle
-    t = LikeForm(request.POST, instance=t1)
-    t.save()
-    time = 1
-    while True:
-        i = l[number]
-        if time > count:
-            x = 0
-            break
-        elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
-            x = i
-            break
-        elif number < count-1:
-            number += 1
-            time += 1
-        else:
-            number = 0
-            time += 1
-            l = random.sample(range(1, count + 1), k=count)
-    return HttpResponseRedirect('../')
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect('../signup/')
+    else:
+        t1 = Like()
+        t1.user = request.user
+        circle = Circle.objects.get(circle_id=x)
+        t1.circle = circle
+        t = LikeForm(request.POST, instance=t1)
+        t.save()
+        time = 1
+        while True:
+            i = l[number]
+            if time > count:
+                x = 0
+                break
+            elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+                x = i
+                break
+            elif number < count-1:
+                number += 1
+                time += 1
+            else:
+                number = 0
+                time += 1
+                l = random.sample(range(1, count + 1), k=count)
+        return HttpResponseRedirect('../')
 
 def dislike(request):
     global x
     global number
     global l
-    time = 1
-    while True:
-        i = l[number]
-        if time > count:
-            x = 0
-            break
-        elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+    if not request.user.is_authenticated:
+        time = 1
+        while True:
+            i = l[number]
             x = i
             if number < count - 1:
                 number += 1
@@ -164,13 +173,28 @@ def dislike(request):
                 l = random.sample(range(1, count + 1), k=count)
                 number = 0
             break
-        elif number < count - 1:
-            number += 1
-            time += 1
-        else:
-            number = 0
-            time += 1
-            l = random.sample(range(1, count + 1), k=count)
+    else:
+        time = 1
+        while True:
+            i = l[number]
+            if time > count:
+                x = 0
+                break
+            elif not (Like.objects.filter(user=request.user, circle__circle_id=i).exists()):
+                x = i
+                if number < count - 1:
+                    number += 1
+                else:
+                    l = random.sample(range(1, count + 1), k=count)
+                    number = 0
+                break
+            elif number < count - 1:
+                number += 1
+                time += 1
+            else:
+                number = 0
+                time += 1
+                l = random.sample(range(1, count + 1), k=count)
     return HttpResponseRedirect('../')
 
 class Login(LoginView):
@@ -224,3 +248,9 @@ def delete(request, circle_id):
 
 class AboutView(TemplateView):
     template_name = 'cms/about.html'
+
+class KiyakuView(TemplateView):
+    template_name = 'cms/kiyaku.html'
+
+class PrivacyView(TemplateView):
+    template_name = 'cms/privacy.html'

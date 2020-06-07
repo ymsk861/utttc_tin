@@ -35,18 +35,30 @@ div {
 .circleid23 .u8a73u7d30u8aacu660e {
   background-color    : rgba(255,255,255,0.0);
   top                 : 230px;
-  height              : 41000px;
-  width               : 365px;
+  height              : 49000px;
+  width               : 370px;
   position            : relative;
-  margin              : 0;
-  left                : 18px;
+  margin              : auto;
+  left                : 0;
   transform           : rotate(0deg);
   opacity             : 1.0;
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
-  font-size           : 12.0px;
+  font-size           : 12px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
   line-height         : 17.0px;
+}
+.circleid23 .twitteru306eu30a2u30a4u30b3u30f3u7d20u6750u305du306e21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : 34px;
+  width               : 34px;
+  position            : absolute;
+  margin              : 0;
+  left                : 325px;
+  transform           : rotate(0deg);
+  opacity             : 1.0;
+  z-index             : 4;
 }
 .circleid23 .rectangle {
   background-color    : rgba(215, 215, 215, 1.0);
