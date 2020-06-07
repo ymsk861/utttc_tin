@@ -14,11 +14,7 @@
 
 <html>
 
-<HEAD>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src=“https://www.googletagmanager.com/gtag/js?id=UA-168591913-1”></script>
 
-</HEAD>
 <head></head>
 <body>
   <form action="../add/{% if todo %}{{ todo.todo_id }}/{% endif %}" method="post">
@@ -28,11 +24,5 @@
     <input type="hidden" name="todo_id" value="{{ todo.todo_id }}"/>
     <input type="submit" value="登録"/>
   </form>
-<script>
-                window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-             gtag(‘js’, new Date());
-            gtag(‘config’, ‘UA-168591913-1’);
 
-</script>
 </body>
