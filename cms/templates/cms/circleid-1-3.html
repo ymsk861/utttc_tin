@@ -11,12 +11,6 @@
 <HEAD>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src=“https://www.googletagmanager.com/gtag/js?id=UA-168591913-1”></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(‘js’, new Date());
-  gtag(‘config’, ‘UA-168591913-1’);
-</script>
 </HEAD>
     <head>
         <link href="../static/images/favicon.png" rel="shortcut icon"/>
@@ -178,6 +172,11 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
+                          window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+             gtag(‘js’, new Date());
+            gtag(‘config’, ‘UA-168591913-1’);
+
         </script>
         <!-- End of Scripts -->
     </body>
